@@ -5,7 +5,7 @@ simple maven, protobuf, spring-boot app.
 The .proto file  /src/main/resources/proto/TestMessage.proto is build by maven and the class ends up under target/generated-sources/proto/TestMessage.java
 
 Build with mvn install
-
+Server default uns at port 80 -> src/main/resources/application.properties
 
 On startup the ContextUpListener sends a POST Request with the  HttpProtoClient to the ProtobufController.
 Verify proto message sending and receiving.
