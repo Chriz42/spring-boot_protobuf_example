@@ -1,0 +1,12 @@
+syntax = "proto2";
+option java_package = "proto";
+
+message Request {
+	 required string query = 1;
+}
+
+
+message Response {
+	required string query = 1;
+	  
+}
