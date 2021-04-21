@@ -19,5 +19,11 @@ For sending a request you need a RestTemplate with ProtobufHttpMessageConverter
 	
 And on the receiving part you have to add HttpMessageConverter to convert back from proto to java object. See Webconfig.java extendMessageConverters methode
 
+Inside the ProtobufController take care to annotate the ProtoObject with @RequestBody without the SpringMAgic will pick an other converter.
+And if you don't know how is calling your API set the contenttype header with "application/x-protobuf" and the accept header for the post methode too. I have used the spring terminology with consumes and produces
+
+```java
+@PostMapping(consumes = "application/x-protobuf", produces = "application/x-protobuf")
+```
 
 The worst with protobuf is the lack of documentation and examples....
